@@ -3,32 +3,47 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+  <div className="container">
+    <header className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a
+        href="/"
+        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+      >
+        <svg className="bi me-2" width="40" height="32">
+          <a href="#bootstrap"></a>
+        </svg>
+        <span className="fs-4">Simple header</span>
+      </a>
+
+      <ul className="nav nav-pills">
+        <li className="nav-item">
+          <a href="#" className="nav-link active" aria-current="page">
+            Home
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="#" className="nav-link">
+            Features
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="#" className="nav-link">
+            Pricing
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="#" className="nav-link">
+            FAQs
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="#" className="nav-link">
+            About
+          </a>
+        </li>
+      </ul>
+    </header>
+  </div>
 )
 
 Header.propTypes = {
